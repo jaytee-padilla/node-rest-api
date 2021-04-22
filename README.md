@@ -1,6 +1,6 @@
 # node-rest-api
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Syntax      | Description | Test |
+| ----------- | ----------- | ----------- |
+| Header      | Title       | Test |
+| Paragraph   | Text        | Test |
