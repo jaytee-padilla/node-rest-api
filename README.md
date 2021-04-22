@@ -17,7 +17,7 @@
 
 ### API Schemas
 
-#### Buff/Debuff/OtherStatusEffect Schema
+#### Buff/Debuff/Other Status Effect Schema
 
 | Fields          | Data type        | Metadata                                            |
 | :---            | :---             | :---                                                |
