@@ -9,16 +9,16 @@ mysql.server stop
 
 ### API Endpoints
 
-| Methods | Endpoints                        | Description                                       |
-| :---    | :---                             | :---                                              |
-| GET     | /                                | Returns the server status with a message          |
-| GET     | /api/status-effects              | Gets all buffs, debuffs, and other status effects |
-| GET     | /api/buffs                       | Gets all buffs                                    |
-| GET     | /api/buffs/:id                   | Gets a buff by id                                 |
-| GET     | /api/debuffs                     | Gets all debuffs                                  |
-| GET     | /api/debuffs/:id                 | Gets a debuff by id                               |
-| GET     | /api/other-status-effects/       | Gets all other status effects                     |
-| GET     | /api/other-status-effects/:id    | Gets other status effect by id                    |
+| Methods | Endpoints                    | Description                                       |
+| :---    | :---                         | :---                                              |
+| GET     | /                            | Returns the server status with a message          |
+| GET     | /status-effects              | Gets all buffs, debuffs, and other status effects |
+| GET     | /buffs                       | Gets all buffs                                    |
+| GET     | /buffs/:id                   | Gets a buff by id                                 |
+| GET     | /debuffs                     | Gets all debuffs                                  |
+| GET     | /debuffs/:id                 | Gets a debuff by id                               |
+| GET     | /other-status-effects/       | Gets all other status effects                     |
+| GET     | /other-status-effects/:id    | Gets other status effect by id                    |
 
 ### API Schemas
 
