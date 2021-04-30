@@ -1,15 +1,12 @@
-const express = require('express');
+// PACKAGES
+const routes = require('express').Router();
+require('dotenv').config();
 const mysql = require('mysql');
 
-const { port, user, password, host, database } = require('./utils/config');
+// MODULES
+const { host, user, password, database } = require('../utils/config');
 
-const app = express();
-
-app.get('/', (req, res) => {
-	res.status(200).json('Server is up and running!');
-});
-
-app.get('/buffs', (req, res) => {
+routes.get('/', (req, res) => {
 	res.status(200).json([
 		{
 			name: "Advantage",
@@ -22,7 +19,7 @@ app.get('/buffs', (req, res) => {
 	])
 });
 
-app.get('/buffs/:id', (req, res) => {
+routes.get('/:id', (req, res) => {
 	const connection = mysql.createConnection({
 		host: host,
 		user: user,
@@ -34,17 +31,19 @@ app.get('/buffs/:id', (req, res) => {
 		if (err) {
 			res.status(500).json({errorMessage: err});
 			console.log(err);
+
+			return;
 		}
 
 		if (!rows[0]) {
 			res.status(404).json({errorMessage: `Buff id = ${req.params.id} does not exist`});
 			console.log(`Buff id = ${req.params.id} does not exist`);
+
+			return;
 		}
 
 		res.status(200).json(rows[0]);
 	});
 });
 
-app.listen(port, () => {
-	console.log(`Server is up and listening on port ${port}!`);
-});
+module.exports = routes
