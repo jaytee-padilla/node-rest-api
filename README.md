@@ -2,6 +2,11 @@
 
 ## API Documentation
 
+### Local MySql Server Commands
+
+mysql.server start  
+mysql.server stop  
+
 ### API Endpoints
 
 | Methods | Endpoints                        | Description                                       |
